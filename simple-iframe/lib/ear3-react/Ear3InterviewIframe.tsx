@@ -120,7 +120,7 @@ export function Ear3InterviewIframe(props: Ear3InterviewProps) {
     <iframe
       src={session.sessionUrl}
       title="Ear3 interview"
-      allow="microphone; camera; autoplay; clipboard-read; clipboard-write"
+      allow="microphone; camera; autoplay; clipboard-read; clipboard-write; compute-pressure; display-capture"
       style={{ ...DEFAULT_IFRAME_STYLE, ...style }}
       className={className}
     />
