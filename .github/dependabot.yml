@@ -1,0 +1,51 @@
+version: 2
+updates:
+  # Root — this only picks up dev tooling since examples are separate npm projects
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+
+  # Per-example npm updates — one PR per example when a dep changes
+  - package-ecosystem: npm
+    directory: /simple-iframe
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - example:simple-iframe
+
+  - package-ecosystem: npm
+    directory: /simple-react
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - example:simple-react
+
+  - package-ecosystem: npm
+    directory: /simple-webhook
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - example:simple-webhook
+
+  # GitHub Actions themselves
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    labels:
+      - dependencies
+      - ci
