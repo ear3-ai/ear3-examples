@@ -36,6 +36,25 @@ npm run dev
 | `app/interview/page.tsx`          | Mounts `<Ear3InterviewIframe>` — this is the whole integration |
 | `app/page.tsx`                    | Landing with CTA to `/interview`                               |
 | `app/done/page.tsx`               | Thank-you page after `onComplete` fires                        |
+| `lib/ear3-react/`                 | **Temporarily vendored** SDK — see [note below](#note-vendored-sdk) |
+
+## Note: vendored SDK
+
+Until `@ear3/react` is published on npm, this example ships the SDK
+source inline under `lib/ear3-react/`. The import
+`from '@/lib/ear3-react'` in `app/interview/page.tsx` will change to
+`from '@ear3/react'` (and the SDK folder will go away) as soon as the
+npm publish lands.
+
+If you're copying this example into your own project **now**, you can
+either:
+
+1. Copy `lib/ear3-react/` along with it and use the relative import, or
+2. Clone [`ear3-ai/ear3-react`](https://github.com/ear3-ai/ear3-react)
+   next to your app and link with `npm install ../ear3-react`
+
+Everything else works exactly like the eventual npm-published version —
+same API, same props, same behaviour.
 
 ## Trade-offs of this approach
 
