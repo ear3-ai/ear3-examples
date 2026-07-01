@@ -1,5 +1,7 @@
 # simple-iframe
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fear3-ai%2Fear3-examples%2Ftree%2Fmain%2Fsimple-iframe&env=NEXT_PUBLIC_EAR3_PUBLISHABLE_KEY,NEXT_PUBLIC_EAR3_INTERVIEW_ID&envDescription=Grab%20both%20from%20app.ear3.ai%2Fsettings%2Fapi-keys)
+
 The smallest possible Ear3 voice interview integration: drop
 `<Ear3InterviewIframe>` into a Next.js page and you're done.
 
