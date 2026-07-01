@@ -10,13 +10,14 @@ each**; templates get you to production.
 
 ## What's in here
 
-| Example                                 | Shows                                                          | Stack             |
-| --------------------------------------- | -------------------------------------------------------------- | ----------------- |
-| [`simple-iframe`](./simple-iframe)      | Minimal `<Ear3InterviewIframe>` embed                          | Next.js 14        |
+| Example                                 | Shows                                                                       | Stack             |
+| --------------------------------------- | --------------------------------------------------------------------------- | ----------------- |
+| [`simple-iframe`](./simple-iframe)      | Minimal `<Ear3InterviewIframe>` embed — 30-second integration               | Next.js 14        |
+| [`simple-react`](./simple-react)        | Minimal `<Ear3Interview>` native RTVI component — no iframe, full UI control | Next.js 14        |
 
-More examples coming — `simple-react` (native RTVI component) and
-`simple-webhook` (full server-side flow with `@ear3/node`) are next up.
-See [ear3.ai/developer](https://ear3.ai/developer) for the roadmap.
+More examples coming — `simple-webhook` (full server-side flow with
+`@ear3/node`) is next up. See
+[ear3.ai/developer](https://ear3.ai/developer) for the roadmap.
 Contributions welcome (see [Contributing](#contributing)).
 
 ## Grab just one example

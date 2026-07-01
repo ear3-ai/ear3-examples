@@ -1,8 +1,8 @@
 {
-  "name": "ear3-example-simple-iframe",
+  "name": "ear3-example-simple-react",
   "version": "0.1.0",
   "private": true,
-  "description": "Minimal Ear3 voice interview embed via <Ear3InterviewIframe>",
+  "description": "Minimal Ear3 voice interview via <Ear3Interview> — native RTVI component, no iframe",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
