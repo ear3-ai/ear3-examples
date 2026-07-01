@@ -1,5 +1,9 @@
 # ear3-examples
 
+[![typecheck](https://github.com/ear3-ai/ear3-examples/actions/workflows/typecheck.yml/badge.svg)](https://github.com/ear3-ai/ear3-examples/actions/workflows/typecheck.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](./.nvmrc)
+
 Focused, runnable examples for building with [Ear3](https://ear3.ai) —
 the voice-interview platform. Each folder is a standalone project you
 can clone, `npm install`, and run in under a minute.
