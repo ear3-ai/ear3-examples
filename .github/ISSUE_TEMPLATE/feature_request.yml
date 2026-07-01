@@ -1,0 +1,35 @@
+name: Feature request / new example
+description: Suggest a new example or improvement
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you proposing?
+      options:
+        - New example (framework we don't cover)
+        - Improvement to an existing example
+        - Repo-level tooling change
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: Describe the example / change in one paragraph.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What use case does this unlock?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
