@@ -1,6 +1,6 @@
 # simple-react
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fear3-ai%2Fear3-examples%2Ftree%2Fmain%2Fsimple-react&env=NEXT_PUBLIC_EAR3_PUBLISHABLE_KEY,NEXT_PUBLIC_EAR3_INTERVIEW_ID&envDescription=Grab%20both%20from%20app.ear3.ai%2Fsettings%2Fapi-keys)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fear3-ai%2Fear3-examples&project-name=ear3-simple-react&repository-name=ear3-simple-react&root-directory=simple-react&env=NEXT_PUBLIC_EAR3_PUBLISHABLE_KEY,NEXT_PUBLIC_EAR3_INTERVIEW_ID&envDescription=Grab%20both%20from%20app.ear3.ai%2Fsettings%2Fapi-keys)
 
 Ear3 voice interview embedded as a **native React component** — the
 RTVI client runs directly in your React tree, no iframe.
