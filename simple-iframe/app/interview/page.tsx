@@ -20,6 +20,7 @@ export default function InterviewPage() {
       <Ear3InterviewIframe
         interviewId={process.env.NEXT_PUBLIC_EAR3_INTERVIEW_ID!}
         publishableKey={process.env.NEXT_PUBLIC_EAR3_PUBLISHABLE_KEY!}
+        apiBase={process.env.NEXT_PUBLIC_EAR3_API_BASE}
         style={{ flex: 1, minHeight: 600 }}
         onComplete={(event) => {
           router.push(`/done?session=${event.sessionId}`)
