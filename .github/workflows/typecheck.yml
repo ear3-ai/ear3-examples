@@ -1,0 +1,35 @@
+name: typecheck
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  typecheck:
+    name: typecheck (${{ matrix.example }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - simple-iframe
+          - simple-react
+          - simple-webhook
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ${{ matrix.example }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ matrix.example }}
+        run: npm install --no-audit --no-fund
+
+      - name: Typecheck
+        working-directory: ${{ matrix.example }}
+        run: npm run typecheck
