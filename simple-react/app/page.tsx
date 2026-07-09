@@ -14,10 +14,18 @@ export default function LandingPage() {
         Ear3 · simple-react
       </h1>
       <p style={{ fontSize: 15, lineHeight: 1.55, color: '#475569', marginBottom: 32 }}>
-        Native RTVI component. When you click below, the next page mounts a
+        Native RTVI. When you click below, the next page spins up a
         {' '}
         <code style={{ padding: '2px 5px', background: 'rgba(230,92,0,0.08)', color: '#E65C00', borderRadius: 4, fontSize: 13 }}>
-          &lt;Ear3Interview&gt;
+          VoiceClient
+        </code>{' '}
+        from{' '}
+        <code style={{ padding: '2px 5px', background: 'rgba(230,92,0,0.08)', color: '#E65C00', borderRadius: 4, fontSize: 13 }}>
+          @ear3/voice
+        </code>{' '}
+        and mounts a composable{' '}
+        <code style={{ padding: '2px 5px', background: 'rgba(230,92,0,0.08)', color: '#E65C00', borderRadius: 4, fontSize: 13 }}>
+          &lt;VoiceAgent&gt;
         </code>{' '}
         that talks to Pipecat Cloud directly from your React tree — no iframe.
       </p>

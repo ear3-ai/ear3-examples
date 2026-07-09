@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 
 export const metadata: Metadata = {
   title: 'Ear3 · simple-react example',
-  description: 'Minimal Ear3 voice interview via <Ear3Interview> — native RTVI component',
+  description: 'Minimal Ear3 voice interview via @ear3/voice — headless VoiceClient + composable components',
 }
 
 export const viewport: Viewport = {

@@ -1,8 +1,8 @@
 {
   "name": "ear3-example-simple-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Minimal Ear3 voice interview via <Ear3Interview> — native RTVI component, no iframe",
+  "description": "Minimal Ear3 voice interview via @ear3/voice — headless VoiceClient + composable React components, no iframe",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ear3/react": "^0.1.0",
+    "@ear3/voice": "^0.1.0",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"

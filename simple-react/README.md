@@ -5,8 +5,9 @@
 Ear3 voice interview embedded as a **native React component** — the
 RTVI client runs directly in your React tree, no iframe.
 
-**What this shows:** the `<Ear3Interview>` component from `@ear3/react`.
-Under the hood it uses `@pipecat-ai/client-js` +
+**What this shows:** `VoiceClient` + `<VoiceProvider>` + `<VoiceAgent>`
+from `@ear3/voice` — a headless SDK core with composable React
+components. Under the hood it uses `@pipecat-ai/client-js` +
 `@pipecat-ai/daily-transport` to talk to the same Pipecat Cloud worker
 that powers the iframe path — you just get full UI control and the mic
 permission prompt in your own origin.
@@ -27,15 +28,16 @@ npm run dev
 ## What you'll see
 
 - `/` — landing with "Start" button
-- `/interview` — `<Ear3Interview>` mounts, connects to Pipecat Cloud
-  via WebRTC, renders default UI (status, transcript, connect/disconnect)
+- `/interview` — `VoiceClient` connects to Pipecat Cloud via WebRTC,
+  `<VoiceAgent>` renders default UI (status, transcript,
+  connect/disconnect)
 - `/done?session=…` — thank-you page
 
 ## Files that matter
 
 | File                              | What it does                                             |
 | --------------------------------- | -------------------------------------------------------- |
-| `app/interview/page.tsx`          | Mounts `<Ear3Interview>` — the whole native integration  |
+| `app/interview/page.tsx`          | Wires `VoiceClient` + `<VoiceProvider>` + `<VoiceAgent>` |
 | `app/page.tsx`                    | Landing with CTA to `/interview`                         |
 | `app/done/page.tsx`               | Thank-you after `onComplete` fires                       |
 
@@ -43,12 +45,15 @@ npm run dev
 
 - **Bundle add:** ~150 KB (Pipecat client + Daily transport)
 - **Mic permission prompt:** appears in **your** origin (better UX)
-- **UI control:** full — swap out the default UI via `renderControls`
+- **UI control:** full — swap `<VoiceAgent>` for your own composition
+  of `<VoiceStatus>` / `<Transcript>` / `<VoiceControls>` /
+  `<DeviceSelector>`, or drop straight to `useVoice()` / `useTranscript()`
+  hooks
 - **Pipeline upgrades:** package bump required (Ear3-managed iframe
   users get updates automatically)
 
 Want a custom voice UI (own waveform, own transcript panel)? See
-`renderControls` in the [Native component docs](https://ear3.ai/developer/sdk/native-component).
+the composable primitives + hooks in the [Native component docs](https://ear3.ai/developer/sdk/native-component).
 
 ## Where to go next
 
