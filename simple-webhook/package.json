@@ -1,6 +1,6 @@
 {
   "name": "ear3-example-simple-webhook",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Ear3 voice interview + signed webhook handler — full end-to-end flow",
   "scripts": {
@@ -10,8 +10,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ear3/node": "^0.1.0",
-    "@ear3/react": "^0.1.0",
+    "@ear3/embed": "^0.1.1",
+    "@ear3/server": "^0.1.2",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"

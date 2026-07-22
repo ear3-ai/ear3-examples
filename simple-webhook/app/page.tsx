@@ -19,7 +19,7 @@ export default function LandingPage() {
         <code style={{ padding: '2px 5px', background: 'rgba(230,92,0,0.08)', color: '#E65C00', borderRadius: 4, fontSize: 13 }}>
           /api/webhooks/ear3
         </code>{' '}
-        on the server verifying signed events with `@ear3/node`.
+        on the server verifying signed events with `@ear3/server`.
       </p>
       <Link
         href="/interview"

@@ -3,37 +3,27 @@
 > Loaded at the start of every session touching this directory. Read
 > this before you start editing.
 
-## ⚠️ Priority task — always ask on session start
+## SDK packages — real names
 
-**Before doing anything else in this repo, ask the user:**
+The SDK was never published as `@ear3/react` / `@ear3/node` — those
+names were placeholders used while the packages were still vendored
+locally. The real, published packages are:
 
-> "Has `@ear3/react` been published to npm yet? If yes, I'll swap the
-> vendored `lib/ear3-react/` copies for a normal `"@ear3/react": "^X.Y.Z"`
-> dependency across all examples. If no, we keep the vendored code."
+- `@ear3/embed` — `<Ear3InterviewIframe>`, iframe embed (used by
+  `simple-iframe`, `simple-webhook`)
+- `@ear3/voice` — `<Ear3Interview>`, native RTVI component
+- `@ear3/server` — `Ear3` server client, webhook verification (used by
+  `simple-webhook`)
+- `@ear3/voice-ui`, `@ear3/cli` — turnkey UI widget, CLI
 
-**Why this matters:**
+All vendored `lib/ear3-react/` copies have been removed and replaced
+with real npm dependencies. If you add a new example, install the real
+package directly — don't vendor.
 
-Every example under this repo currently ships a vendored copy of the
-SDK source under `lib/ear3-react/` because `@ear3/react` isn't on the
-public npm registry yet. That's a temporary hack — code duplication
-across every example, SDK fixes have to be re-copied, users can't
-`npm install @ear3/react` in their own projects.
-
-The moment the SDK is published, the vendoring should go:
-
-1. In each `<example>/package.json`, replace the vendored setup with
-   `"@ear3/react": "^X.Y.Z"` (whatever version is on npm)
-2. In each `<example>/app/**/*.tsx`, change
-   `from '@/lib/ear3-react'` → `from '@ear3/react'`
-3. Delete `<example>/lib/ear3-react/` entirely
-4. Bump the example's own `version` in `package.json` (0.2.0)
-5. Update each example's README — remove the "Note: vendored SDK" section
-6. Update the root `README.md` and `CHANGELOG.md` accordingly
-
-**Verify publish status quickly:**
+**Verify current published versions:**
 
 ```bash
-npm view @ear3/react version 2>/dev/null && echo "PUBLISHED" || echo "not yet on npm"
+npm view @ear3/embed version && npm view @ear3/voice version && npm view @ear3/server version
 ```
 
 ## Other rules for this repo
