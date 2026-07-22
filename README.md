@@ -18,7 +18,7 @@ each**; templates get you to production.
 | --------------------------------------- | ---------------------------------------------------------------------------- | ----------------- |
 | [`simple-iframe`](./simple-iframe)      | Minimal `<Ear3InterviewIframe>` embed — 30-second integration                | Next.js 14        |
 | [`simple-react`](./simple-react)        | Minimal `<Ear3Interview>` native RTVI component — no iframe, full UI control | Next.js 14        |
-| [`simple-webhook`](./simple-webhook)    | Full flow — iframe embed + signed webhook handler with `@ear3/node`          | Next.js 14        |
+| [`simple-webhook`](./simple-webhook)    | Full flow — iframe embed + signed webhook handler with `@ear3/server`          | Next.js 14        |
 
 More examples on the roadmap: vanilla JS iframe (no React), Rehearse CLI
 for text-mode interview validation, Vue/Svelte adaptations. See

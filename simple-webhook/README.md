@@ -1,8 +1,8 @@
 # simple-webhook
 
 The full end-to-end Ear3 flow in a single Next.js app: `<Ear3InterviewIframe>`
-on the client + `/api/webhooks/ear3` on the server verifying signed
-`interview.completed` events with `@ear3/node`.
+(`@ear3/embed`) on the client + `/api/webhooks/ear3` on the server
+verifying signed `interview.completed` events with `@ear3/server`.
 
 **What this shows:**
 

@@ -20,7 +20,7 @@ server-side webhook flow.
 
 - `simple-iframe` — minimal `<Ear3InterviewIframe>` embed in Next.js 14
 - `simple-react` — minimal `<Ear3Interview>` native RTVI component
-- `simple-webhook` — full flow with `@ear3/node` webhook handler
+- `simple-webhook` — full flow with `@ear3/server` webhook handler
 - CI: per-example typecheck matrix on push + PR
 - Dependabot: weekly updates for each example and root
 - CONTRIBUTING guide, SECURITY policy, PR + issue templates

@@ -1,7 +1,13 @@
-import { Ear3 } from '@ear3/node'
+import { Ear3 } from '@ear3/server'
 import { NextResponse } from 'next/server'
 
 const ear3 = new Ear3(process.env.EAR3_SECRET_KEY!)
+
+interface InterviewCompletedData {
+  sessionId: string
+  interviewId: string
+  metadata: Record<string, unknown> | null
+}
 
 export async function POST(req: Request) {
   // 1. Grab the RAW body — do NOT parse as JSON before verifying.
@@ -23,7 +29,7 @@ export async function POST(req: Request) {
   //      delivery as failed and eventually retries (roadmapped)
   let event
   try {
-    event = ear3.webhooks.constructEvent(
+    event = ear3.webhooks.constructEvent<InterviewCompletedData>(
       rawBody,
       signature,
       process.env.EAR3_WEBHOOK_SECRET!,

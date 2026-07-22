@@ -1,6 +1,6 @@
 'use client'
 
-import { Ear3InterviewIframe } from '@/lib/ear3-react'
+import { Ear3InterviewIframe } from '@ear3/embed'
 import { useRouter } from 'next/navigation'
 
 export default function InterviewPage() {
